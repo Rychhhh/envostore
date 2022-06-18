@@ -29,5 +29,9 @@ class AppServiceProvider extends ServiceProvider
         Str::macro('currency', function ( $expression ) {
             return sprintf('Rp %s' , number_format($expression));
         });
+
+        if(env("APP_ENV") !== 'local') {
+            URL::forceScheme('https');
+        }
     }
 }
