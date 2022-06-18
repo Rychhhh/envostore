@@ -19,10 +19,9 @@ class CreateProductTable extends Migration
             $table->integer('harga')->nullable();
             $table->string('description')->nullable();
             $table->string('stok')->nullable();
-            $table->string('category')->nullable();
             $table->string('image');
-            // $table->unsignedBigInteger('products_id');
-            // $table->foreign('products_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
             $table->timestamps();
         });
     }

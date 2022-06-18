@@ -1,5 +1,6 @@
 @php
       use App\Models\Cart;
+      use App\Models\Category;
 
       $user = auth()->user();
       // For showcart hover
@@ -8,6 +9,9 @@
       $ifcartmorethan4 = Cart::all()->where('product_nama')->count();
 
       $totalPesanan = Cart::where('name', $user->name)->sum('total');
+
+      // for categori in side nav
+      $categori = Category::all();
 @endphp
    
    
@@ -92,7 +96,7 @@
               <div class="col-lg-2 col-md-2 col-12">
                 <!-- Logo -->
                 <div class="logo">
-                  <a href="index.html"><img src="images/web/logodesain_web.jpg" alt="logo" /></a>
+                  <a href="{{ url('home') }}"><img src="{{ asset('images/web/logodesain_web.jpg') }}" alt="logo" /></a>
                 </div>
                 <!--/ End Logo -->
                 <!-- Search Form -->
@@ -202,7 +206,10 @@
                   <div class="all-category">
                     <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>Welcome </h3>
                     <ul class="main-category">
-                      <li><a href="#">About Me </a></li>
+                      <li><a href="https://porthan-react.vercel.app/">About Me </a></li>
+                      @foreach ($categori as $item)
+                      <li class="nav-item"><a class="nav-link" href="{{ route('product.kategori', $item->nama_kategori) }}" >{{ $item->nama_kategori }}</a></li>
+                      @endforeach
                     </ul>
                   </div>
                 </div>

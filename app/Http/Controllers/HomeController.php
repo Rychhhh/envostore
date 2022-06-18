@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -27,9 +26,11 @@ class HomeController extends Controller
     public function index()
     {
         $product = Product::latest()->paginate(6);
+        $categori = Category::all();
+        $hotitem = Product::latest()->get()->random(1);
 
         return view('product.index', compact(
-            'product'
+            'product', 'hotitem', 'categori'
         ))->with('i', (request()->input('page', 1)- 1) * 6);
     }
 
@@ -45,6 +46,16 @@ class HomeController extends Controller
         ));
     } 
 
+    public function kategori(Category $kategori)
+    {
+        $categori = Category::all();
+        $product = $kategori->Product()->get();
+        $hotitem = Product::latest()->get()->random(1);
+
+        return view('product.index', compact('product', 'categori', 'hotitem'))->with('success', 'Data Ditemukan');
+    }
+
+    // Belum Berfungsi 
     // for detail
     public function detailProduct($id)
     {

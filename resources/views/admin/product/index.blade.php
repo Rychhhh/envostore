@@ -32,7 +32,7 @@
                             <td>{{ $product->harga }}</td>
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->stok }}</td>
-                            <td>{{ $product->category }}</td>
+                            <td>{{ $product->category_id }}</td>
                             <td>
                                 <img width="100" height="100" src="{{ asset('storage/thumbnail/'. $product->image) }}">
                             </td>

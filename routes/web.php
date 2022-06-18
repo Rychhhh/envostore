@@ -5,8 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ProductController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,12 +39,17 @@ Route::get('admin', function() { return view('admin.index'); })->middleware('che
 Route::get('pembeli', function() { return view('product.index'); })->middleware('checkRole:pembeli ,admin ');
 
 
-Route::resource('product', AdminController::class);
+Route::resource('product', ProductController::class);
 
 Route::resource('user', UserController::class);
 
+// View And Create In Admin Manager
+Route::get('category/store', [CategoryController::class, 'store']);
+Route::resource('category', CategoryController::class);
+
 // Fitur
 Route::get('/search', [HomeController::class, 'search']);
+Route::get('/product-kategori/{kategori}', [HomeController::class, 'kategori'])->name('product.kategori');
 
 // Cart
 Route::get('showcart', [CartController::class, 'showcart']);

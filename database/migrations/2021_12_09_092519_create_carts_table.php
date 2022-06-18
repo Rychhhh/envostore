@@ -20,7 +20,7 @@ class CreateCartsTable extends Migration
             $table->string('product_nama');
             $table->bigInteger('quantity')->nullable();
             $table->bigInteger('harga');
-            $table->string('category');
+            $table->string('category_id');
             $table->string('code');
             $table->string('status')->default('0');
             $table->string('ongkir');

@@ -11,8 +11,8 @@ class Product extends Model
 
     protected $table = 'product';
 
-    // public function Kategori()
-    // {
-    //     # code...
-    // }
+    public function Kategori()
+    {
+        return $this->belongsTo(\App\Models\Category::class, 'category_id', 'id');
+    }
 }

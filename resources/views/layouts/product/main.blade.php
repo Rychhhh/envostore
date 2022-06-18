@@ -21,30 +21,30 @@
     <!-- StyleSheet -->
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.min.css') }}" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}" />
     <!-- Fancybox -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}" />
     <!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}" />
     <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/niceselect.css" />
+    <link rel="stylesheet" href="{{ asset('css/niceselect.css') }}" />
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <!-- Flex Slider CSS -->
-    <link rel="stylesheet" href="css/flex-slider.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/flex-slider.min.css') }}" />
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/owl-carousel.css" />
+    <link rel="stylesheet" href="{{ asset('css/owl-carousel.css') }}" />
     <!-- Slicknav -->
-    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/slicknav.min.css') }}" />
 
     <!-- Eshop StyleSheet -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}" />
+    <link rel="stylesheet" href="{{ asset('style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
   </head>
   <body class="js">
     <!-- Preloader -->
@@ -208,7 +208,7 @@
               <!-- Single Widget -->
               <div class="single-footer about">
                 <div class="logo">
-                  <a href="index.html"><img src="images/logo2.png" alt="#" /></a>
+                  <a href="{{ url('product') }}"><img src="{{ asset('images/web/logodesain_web.jpg') }}" alt="#" /></a>
                 </div>
                 <p class="text">Website ini dibuat untuk orang yang ingin berjualan dan juga orang yang membutuhkan produk produk unggulan</p>
                 <p class="call">
@@ -222,8 +222,8 @@
               <div class="single-footer links">
                 <h4>Information</h4>
                 <ul>
-                  <li><a href="#">About Me</a></li>
-                  <li><a href="#">More Portfolio</a></li>
+                  <li><a href="https://github.com/Ryhann?tab=repositories">About Me</a></li>
+                  <li><a href="https://porthan-react.vercel.app/">More Portfolio</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -234,9 +234,9 @@
               <div class="single-footer links">
                 <h4>My Social Media</h4>
                 <ul>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Github</a></li>
-                  <li><a href="#">Twitter</a></li>
+                  <li><a href="https://www.instagram.com/ellohann/">Instagram</a></li>
+                  <li><a href="https://github.com/Ryhann">Github</a></li>
+                  <li><a href="https://twitter.com/Rayhan26901596">Twitter</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -280,52 +280,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <!-- Jquery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
 
-    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="{{ asset('js/jquery-migrate-3.0.0.js') }}"></script>
 
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
     <!-- Popper JS -->
-    <script src="js/popper.min.js"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
 
     <!-- Bootstrap JS -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <!-- Color JS -->
     {{-- <script src="js/colors.js"></script> --}}
 
     <!-- Slicknav JS -->
-    <script src="js/slicknav.min.js"></script>
+    <script src="{{ asset('js/slicknav.min.js') }}"></script>
 
     <!-- Owl Carousel JS -->
-    <script src="js/owl-carousel.js"></script>
+    <script src="{{ asset('js/owl-carousel.js') }}"></script>
 
     <!-- Magnific Popup JS -->
-    <script src="js/magnific-popup.js"></script>
+    <script src="{{ asset('js/magnific-popup.js') }}"></script>
 
     <!-- Waypoints JS -->
-    <script src="js/waypoints.min.js"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
 
     <!-- Countdown JS -->
-    <script src="js/finalcountdown.min.js"></script>
+    <script src="{{ asset('js/finalcountdown.min.js') }}"></script>
 
     <!-- Nice Select JS -->
-    <script src="js/nicesellect.js"></script>
+    <script src="{{ asset('js/nicesellect.js') }}"></script>
 
     <!-- Flex Slider JS -->
-    <script src="js/flex-slider.js"></script>
+    <script src="{{ asset('js/flex-slider.js') }}"></script>
 
     <!-- ScrollUp JS -->
-    <script src="js/scrollup.js"></script>
+    <script src="{{ asset('js/scrollup.js') }}"></script>
 
     <!-- Onepage Nav JS -->
-    <script src="js/onepage-nav.min.js"></script>
+    <script src="{{ asset('js/onepage-nav.min.js') }}"></script>
 
     <!-- Easing JS -->
-    <script src="js/easing.js"></script>
+    <script src="{{ asset('js/easing.js') }}"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+    <script src="{{ asset('js/active.js') }}"></script>
 
     {{-- Sweet Alert --}}
     @include('sweetalert::alert')

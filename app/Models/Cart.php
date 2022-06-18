@@ -14,4 +14,9 @@ class Cart extends Model
     protected $fillable = [
         'quantity'
     ];
+
+    public function Kategori()
+    {
+        return $this->belongsTo(\App\Models\Category::class, 'category_id', 'id');
+    }
 }

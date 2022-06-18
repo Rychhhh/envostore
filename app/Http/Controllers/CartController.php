@@ -32,7 +32,7 @@ class CartController extends Controller
         $cart->product_nama = $product->nama;
         $cart->quantity = $request->quantity;
         $cart->harga = $product->harga;
-        $cart->category = $product->category;
+        $cart->category_id = $request->category_id;
         $cart->code = mt_rand(100, 999);
         $cart->ongkir =  mt_rand(13000, 100000);
         $cart->image = $product->image;

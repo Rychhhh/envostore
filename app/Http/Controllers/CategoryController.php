@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        
+        $category = Category::all();
+        // view category
+        return view('admin.category.index', compact('category'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -35,7 +37,9 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-       
+        // 
+        $data['nama_kategori'] = $request->nama_kategori;
+        Category::insert($data);
     }
 
     /**
@@ -57,7 +61,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-       
+        //
     }
 
     /**
@@ -80,6 +84,6 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-      
+        //
     }
 }

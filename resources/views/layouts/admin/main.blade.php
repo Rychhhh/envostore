@@ -71,6 +71,20 @@
             </div>
           </li>
 
+           <!-- Nav Item - Product -->
+           <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#categoryCollapse" aria-expanded="true" aria-controls="collapsePages">
+              <i class="fas fa-fw fa-folder"></i>
+              <span>Category</span>
+            </a>
+            <div id="categoryCollapse" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Data :</h6>
+                  <a class="collapse-item" href="{{ url('category') }}">Show Category</a>
+              </div>
+            </div>
+          </li>
+
            <!-- Nav Item - Transaksi -->
            <li class="nav-item active">
             <a class="nav-link" href="{{ url('admin/transaksi') }}">
@@ -209,6 +223,7 @@
       
 
       <!-- Bootstrap core JavaScript-->
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
       <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   
@@ -227,7 +242,10 @@
 
       {{-- Sweet Alert --}}
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+      
+      @yield('script')
 
     </body>
 </html>

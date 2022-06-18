@@ -15,7 +15,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // 
+        // call all seeder
+        $this->call([
+            ProductSeeder::class
+        ]);
+
+        // user seeder 
         $user = [
             [
                 'name' => 'user',

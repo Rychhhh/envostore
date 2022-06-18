@@ -16,13 +16,14 @@ class ProductSeeder extends Seeder
     {
         // product seeder
         $product = [
+
             // Electonic
             [
                 'nama' => 'Fridge',
                 'harga' => '15000000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '1200',
-                'category' => 'Electronic',
+                'category_id' => 2,
                 'image' => 'fridge.jpg',
             ],
             [
@@ -30,7 +31,7 @@ class ProductSeeder extends Seeder
                 'harga' => '55000000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '3200',
-                'category' => 'Electronic',
+                'category_id' => 2,
                 'image' => 'handphone.jpg',
             ],
             [
@@ -38,7 +39,7 @@ class ProductSeeder extends Seeder
                 'harga' => '10999000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '1300',
-                'category' => 'Electronic',
+                'category_id' => 2,
                 'image' => 'laptop.jpg',
             ],
             [
@@ -46,7 +47,7 @@ class ProductSeeder extends Seeder
                 'harga' => '15999000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '500',
-                'category' => 'Electronic',
+                'category_id' => 2,
                 'image' => 'mesincuci.jpg',
             ],
             [
@@ -54,7 +55,7 @@ class ProductSeeder extends Seeder
                 'harga' => '20999000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '1500',
-                'category' => 'Electronic',
+                'category_id' => 2,
                 'image' => 'tv.jpg',
             ],
 
@@ -65,7 +66,7 @@ class ProductSeeder extends Seeder
                 'harga' => '50000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '12500',
-                'category' => 'Fashion',
+                'category_id' => 1,
                 'image' => 'black_shirt.jpg',
             ],
             [
@@ -73,7 +74,7 @@ class ProductSeeder extends Seeder
                 'harga' => '100000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '1700',
-                'category' => 'Fashion',
+                'category_id' => 1,
                 'image' => 'hoodie_girl.jpg',
             ],
             [
@@ -81,7 +82,7 @@ class ProductSeeder extends Seeder
                 'harga' => '250000',
                 'description' => 'Product Bagus Dan Masih Mulus',
                 'stok' => '500',
-                'category' => 'Fashion',
+                'category_id' => 1,
                 'image' => 'summer_dress.jpg',
             ],
         ];
